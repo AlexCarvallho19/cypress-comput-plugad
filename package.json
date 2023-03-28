@@ -1,0 +1,23 @@
+{
+  "name": "cypress-comput-plugad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexCarvallho19/cypress-comput-plugad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexCarvallho19/cypress-comput-plugad/issues"
+  },
+  "homepage": "https://github.com/AlexCarvallho19/cypress-comput-plugad#readme",
+  "devDependencies": {
+    "cypress": "^12.7.0"
+  }
+}
