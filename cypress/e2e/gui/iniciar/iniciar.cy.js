@@ -1,6 +1,4 @@
-/// <reference types="Cypress" />
-
-describe('acessar pagina web', () => {
+describe('Acessar a pagina Computação Plugada WEB', () => {
     beforeEach(() => {
       cy.visit('/')
     })
@@ -10,4 +8,4 @@ describe('acessar pagina web', () => {
       cy.gui_iniciar()
     })
     
-  })
+})

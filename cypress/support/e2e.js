@@ -14,9 +14,18 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
-import './gui/iniciar/inicar_steps'
+import './gui/helpers'
+
 import './gui/iniciar/iniciar'
+import './gui/fases/menu_fases'
+import './gui/fases/fase_1'
+import './gui/fases/fase_2'
+import './gui/fases/fase_3'
+import './gui/fases/fase_4'
+import './gui/fases/fase_5'
+import './gui/fases/fase_6'
+import './gui/fases/fase_7'
+import './gui/fases/fase_6'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

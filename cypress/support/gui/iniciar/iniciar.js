@@ -1,6 +1,4 @@
-/// <reference types="Cypress" />
-
-Cypress.Commands.add("gui_iniciar", () => {
-    cy.gui_clicarIniciar();
-    cy.gui_validarTexto();
+Cypress.Commands.add('gui_iniciar', () => {
+    cy.get('.btn').contains('INICIAR').click();
+    cy.contains('strong', 'Seleção de fase').should('exist');
 })
