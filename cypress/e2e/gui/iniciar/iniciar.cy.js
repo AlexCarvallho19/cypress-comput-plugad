@@ -7,5 +7,5 @@ describe('Acessar a pagina Computação Plugada WEB', () => {
       cy.title().should('be.equal', 'Computação Plugada WEB')
       cy.gui_iniciar()
     })
-    
+  
 })
