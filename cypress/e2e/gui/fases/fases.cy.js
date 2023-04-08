@@ -83,7 +83,175 @@ describe('acessar pagina web', () => {
       })
 
       it('CT009 - Clicando em cartas da segunda atividade Fase 1', () => {
+        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+        cy.contains('INICIAR').click()
+        cy.contains('FASE 1').click()
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-2')
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('Possuem metade do valor anterior').click()
+        cy.url().should('include', '/fase-1-3')
+      
+        cy.get(`div[class*='cards card-sixteen']`).click()
+        cy.get(`div[class*='cards card-eight']`).click()
+        cy.get(`div[class*='cards card-four']`).click()
+        cy.get(`div[class*='cards card-two']`).click()
+        cy.get(`div[class*='cards card-one']`).click()
+      })
+
+      it('CT010 - Clicando na alternativa correta da segunda atividade Fase 1', () => {
+        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+        cy.contains('INICIAR').click()
+        cy.contains('FASE 1').click()
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-2')
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('Possuem metade do valor anterior').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('32').click()
+        cy.url().should('include', '/fase-1-3')
+      })
+
+      it('CT011 - Clicando nas alternativas incorretas da segunda atividade Fase 1', () => {
+        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+        cy.contains('INICIAR').click()
+        cy.contains('FASE 1').click()
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-2')
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('Possuem metade do valor anterior').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('18').click()
+        cy.contains('Tente outra vez').should('be.visible')
         
+        cy.contains('20').click()
+        cy.contains('Tente outra vez').should('be.visible')
+
+        cy.contains('24').click()
+        cy.contains('Tente outra vez').should('be.visible')
 
       })
+
+      it('CT012 - Clicando em cartas da terceira atividade Fase 1', () => {
+        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+        cy.contains('INICIAR').click()
+        cy.contains('FASE 1').click()
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-2')
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('Possuem metade do valor anterior').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('32').click()
+        cy.url().should('include', '/fase-1-3')
+      
+        cy.get(`div[class*='cards card-sixteen']`).click()
+        cy.get(`div[class*='cards card-eight']`).click()
+        cy.get(`div[class*='cards card-four']`).click()
+        cy.get(`div[class*='cards card-two']`).click()
+        cy.get(`div[class*='cards card-one']`).click()
+      })
+
+      it('CT013 - Clicando na alternativa correta da terceira atividade Fase 1', () => {
+        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+        cy.contains('INICIAR').click()
+        cy.contains('FASE 1').click()
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-2')
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('Possuem metade do valor anterior').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('32').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('10001').click()
+        cy.url().should('include', '/fase-1-4')
+
+      })
+
+      it('CT014 - Clicando nas alternativas incorretas da terceira atividade Fase 1', () => {
+        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+        cy.contains('INICIAR').click()
+        cy.contains('FASE 1').click()
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-2')
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('Possuem metade do valor anterior').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('32').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('01101').click()
+        cy.contains('Tente outra vez').should('be.visible')
+        
+        cy.contains('01001').click()
+        cy.contains('Tente outra vez').should('be.visible')
+
+        cy.contains('10011').click()
+        cy.contains('Tente outra vez').should('be.visible')
+
+      })
+
+      it('CT015 - Clicando no botão “>” da tela de parabéns na Fase 1', () => {
+        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+        cy.contains('INICIAR').click()
+        cy.contains('FASE 1').click()
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-2')
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('Possuem metade do valor anterior').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('32').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('10001').click()
+        cy.url().should('include', '/fase-1-4')
+
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fases')
+
+      })
+
+      it.only('CT016 - Clicando no botão “↺” da tela de parabéns na Fase 1', () => {
+        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+        cy.contains('INICIAR').click()
+        cy.contains('FASE 1').click()
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-2')
+        cy.get('.bi.bi-chevron-right').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('Possuem metade do valor anterior').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('32').click()
+        cy.url().should('include', '/fase-1-3')
+
+        cy.contains('10001').click()
+        cy.url().should('include', '/fase-1-4')
+
+        cy.get('.bi.bi-arrow-counterclockwise').click()
+        cy.url().should('include', '/fase-1-1')
+
+      })
+      
 })
