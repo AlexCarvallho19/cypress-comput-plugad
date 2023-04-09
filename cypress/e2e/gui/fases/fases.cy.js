@@ -1,27 +1,21 @@
-describe('acessar pagina web', () => {
+describe('Scripts Fase 1', () => {
     beforeEach(() => {
-      cy.visit('/')
+      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
       cy.gui_iniciar()
     })
 
     it('CT003 - Mostrar fase 1', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 1').click()
       cy.url().should('include', '/fase-1-1')
     })
 
     it('CT004 - Navegar até descrição da fase 1', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 1').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-1-2')
     })
     
     it('CT005 - Navegar até a primeira atividade da fase 1', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 1').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-1-2')
@@ -30,8 +24,6 @@ describe('acessar pagina web', () => {
     })
 
     it('CT006 - Clicando em cartas da primeira atividade Fase 1', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 1').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-1-2')
@@ -49,22 +41,18 @@ describe('acessar pagina web', () => {
       cy.get('.cards.card-one.ng-tns-c43-0').click()
     })
 
-      it('CT007 - Clicando na alternativa correta da primeira atividade Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
-        cy.contains('FASE 1').click()
-        cy.get('.bi.bi-chevron-right').click()
-        cy.url().should('include', '/fase-1-2')
-        cy.get('.bi.bi-chevron-right').click()
-        cy.url().should('include', '/fase-1-3')
+    it('CT007 - Clicando na alternativa correta da primeira atividade Fase 1', () => {
+      cy.contains('FASE 1').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.url().should('include', '/fase-1-2')
+      cy.get('.bi.bi-chevron-right').click()
+      cy.url().should('include', '/fase-1-3')
 
-        cy.contains('Possuem metade do valor anterior').click()
-        cy.url().should('include', '/fase-1-3')
-      })
+      cy.contains('Possuem metade do valor anterior').click()
+      cy.url().should('include', '/fase-1-3')
+    })
 
       it('CT008 - Clicando nas alternativas incorretas da primeira atividade Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -83,8 +71,6 @@ describe('acessar pagina web', () => {
       })
 
       it('CT009 - Clicando em cartas da segunda atividade Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -102,8 +88,6 @@ describe('acessar pagina web', () => {
       })
 
       it('CT010 - Clicando na alternativa correta da segunda atividade Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -118,8 +102,6 @@ describe('acessar pagina web', () => {
       })
 
       it('CT011 - Clicando nas alternativas incorretas da segunda atividade Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -141,8 +123,6 @@ describe('acessar pagina web', () => {
       })
 
       it('CT012 - Clicando em cartas da terceira atividade Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -163,8 +143,6 @@ describe('acessar pagina web', () => {
       })
 
       it('CT013 - Clicando na alternativa correta da terceira atividade Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -183,8 +161,6 @@ describe('acessar pagina web', () => {
       })
 
       it('CT014 - Clicando nas alternativas incorretas da terceira atividade Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -209,8 +185,6 @@ describe('acessar pagina web', () => {
       })
 
       it('CT015 - Clicando no botão “>” da tela de parabéns na Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -232,8 +206,6 @@ describe('acessar pagina web', () => {
       })
 
       it('CT016 - Clicando no botão “↺” da tela de parabéns na Fase 1', () => {
-        cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-        cy.contains('INICIAR').click()
         cy.contains('FASE 1').click()
         cy.get('.bi.bi-chevron-right').click()
         cy.url().should('include', '/fase-1-2')
@@ -256,31 +228,25 @@ describe('acessar pagina web', () => {
       //  ---------------------------- FASE 2 ----------------------------
 })
 
-describe('Scripts Fase 2', () => {
+describe.only('Scripts Fase 2', () => {
     beforeEach(() => {
-      cy.visit('/')
+      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
       cy.gui_iniciar()
     })
 
     it('CT017 - Mostrar fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.url().should('include', '/fase-2-1')
     
     })
 
     it('CT018 - Navegar até segunda descrição da fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
     })
     
     it('CT019 - Navegar até a primeira atividade da fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -289,8 +255,6 @@ describe('Scripts Fase 2', () => {
     })
     
     it('CT0020 - Clicando em cartas da primeira atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -305,8 +269,6 @@ describe('Scripts Fase 2', () => {
     })
 
     it('CT021 - Clicando na alternativa correta da primeira atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -318,8 +280,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT022 - Clicando nas alternativas incorretas da primeira atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -338,8 +298,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT0023 - Clicando em cartas da segunda atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -357,8 +315,6 @@ describe('Scripts Fase 2', () => {
       })
 
       it('CT024 - Clicando na alternativa correta da segunda atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -373,8 +329,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT025 - Clicando nas alternativas incorretas da segunda atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -396,8 +350,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT0026 - Clicando em cartas da terceira atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -418,8 +370,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT027 - Escrevendo resposta correta da terceira atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -438,8 +388,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT028 - Escrevendo resposta incorreta da terceira atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -459,8 +407,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT0029 - Clicando em cartas da quarta atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -485,8 +431,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT030 - Escrevendo resposta correta da quarta atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -511,8 +455,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT031 - Escrevendo resposta incorreta da quarta atividade Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -529,7 +471,7 @@ describe('Scripts Fase 2', () => {
       cy.get('#answer').type('31')
       cy.get('button[type="button"]').click()
       
-      cy.wait(3000)
+      cy.wait(2000)
 
       cy.get('#answer').type('15')
       cy.get('button[type="button"]').click()
@@ -537,8 +479,6 @@ describe('Scripts Fase 2', () => {
       })
 
     it('CT032 - Clicando no botão “>” da tela de parabéns na Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -567,9 +507,7 @@ describe('Scripts Fase 2', () => {
 
     })
 
-    it.only('CT033 - Clicando no botão “↺” da tela de parabéns na Fase 2', () => {
-      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
-      cy.contains('INICIAR').click()
+    it('CT033 - Clicando no botão “↺” da tela de parabéns na Fase 2', () => {
       cy.contains('FASE 2').click()
       cy.get('.bi.bi-chevron-right').click()
       cy.url().should('include', '/fase-2-2')
@@ -586,7 +524,7 @@ describe('Scripts Fase 2', () => {
       cy.get('#answer').type('31')
       cy.get('button[type="button"]').click()
       
-      cy.wait(3000)
+      cy.wait(2000)
 
       cy.get('#answer').type('0')
       cy.get('button[type="button"]').click()
@@ -597,5 +535,749 @@ describe('Scripts Fase 2', () => {
       cy.url().should('include', '/fase-2-1')
       
     })
-
 })
+    // ----------------------------- FASE 3 ---------------------------------------
+
+describe('Scripts Fase 3', () => {
+    beforeEach(() => {
+      cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+      cy.gui_iniciar()
+    })
+
+    it('CT034 - Mostrar descrição fase 3', () => {
+      cy.contains('FASE 3').click()
+      cy.url().should('include', '/fase-3-1')
+    
+    })
+
+    it('CT035 - Navegar até segunda descrição da fase 3', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.url().should('include', '/fase-3-2')
+    })
+    
+    it('CT036 - Navegar até primeira atividade da fase 3', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.url().should('include', '/fase-3-3')
+
+    })
+    
+    it('CT037 - Respondendo primeira atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.url().should('include', '/fase-3-3')
+
+      //Escrevendo texto e clicando em enviar
+
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      
+      cy.wait(1000)
+    })
+
+    it('CT038 - Respondendo primeira atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.url().should('include', '/fase-3-3')
+
+      //Escrevendo texto e clicando em enviar
+
+      cy.get('#answer').type('20')
+      cy.get('button[type="button"]').click()
+      cy.contains('Tente outra vez.').should('be.visible')
+
+      
+
+    })
+    
+    it('CT039 - Respondendo segunda atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      
+      
+    })
+
+    it('CT040 - Respondendo segunda atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click()
+      cy.contains('Tente outra vez.').should('be.visible')
+
+    })
+    
+    it('CT041 - Respondendo terceira atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      
+    })
+
+    it('CT042 - Respondendo terceira atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      
+      //Digitando resposta errada na atividade
+      cy.get('#answer').type('20')
+      cy.get('button[type="button"]').click()
+      cy.contains('Tente outra vez.').should('be.visible')
+
+    })
+
+    it('CT043 - Respondendo quarta atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+    })
+
+    it('CT044 - Respondendo quarta atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta errada na quarta atividade 
+      cy.get('#answer').type('15')
+      cy.get('button[type="button"]').click() 
+      cy.contains('Tente outra vez.').should('be.visible')
+
+    })
+
+    it('CT045 - Respondendo quinta atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+    })
+
+    it('CT046 - Respondendo quinta atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('1')
+      cy.get('button[type="button"]').click() 
+      cy.contains('Tente outra vez.').should('be.visible')
+    })
+
+    it('CT047 - Respondendo sexta atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+    })
+    
+    it('CT048 - Respondendo sexta atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('55')
+      cy.get('button[type="button"]').click() 
+      cy.contains('Tente outra vez.').should('be.visible')
+    })
+
+    it('CT049 - Respondendo sétima atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+
+    })
+    it('CT050 - Respondendo sétima atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta errada na sétima atividade
+      cy.get('#answer').type('1')
+      cy.get('button[type="button"]').click() 
+      cy.contains('Tente outra vez.').should('be.visible')
+    })
+
+    it('CT051 - Respondendo oitava atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na oitava atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+    })
+
+    it('CT052 - Respondendo oitava atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na oitava atividade
+      cy.get('#answer').type('30')
+      cy.get('button[type="button"]').click() 
+      cy.contains('Tente outra vez.').should('be.visible')
+    
+    })
+    it('CT053 - Respondendo nona atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na oitava atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na nona atividade
+      cy.get('#answer').type('20')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+    })
+    
+    it('CT054 - Respondendo nona atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na oitava atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na nona atividade
+      cy.get('#answer').type('22')
+      cy.get('button[type="button"]').click()
+      cy.contains('Tente outra vez.').should('be.visible') 
+    })
+
+    it('CT055 - Respondendo décima atividade da fase 3 corretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na oitava atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na nona atividade
+      cy.get('#answer').type('20')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na decima atividade
+      cy.get('#answer').type('31')
+      cy.get('button[type="button"]').click() 
+    })
+
+    it('CT056 - Respondendo décima atividade da fase 3 incorretamente', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na oitava atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na nona atividade
+      cy.get('#answer').type('20')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na decima atividade
+      cy.get('#answer').type('33')
+      cy.get('button[type="button"]').click() 
+      cy.contains('Tente outra vez.').should('be.visible') 
+    })
+
+    it('CT057 - Clicando no botão “>” da tela de parabéns na Fase 3', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na oitava atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na nona atividade
+      cy.get('#answer').type('20')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na decima atividade
+      cy.get('#answer').type('31')
+      cy.get('button[type="button"]').click() 
+
+      //Clicando no botão ">"
+      cy.get('.bi.bi-chevron-right').click()
+      cy.url().should('include', '/fases')
+    })
+
+    it('CT058 - Clicando no botão “↺” da tela de parabéns na Fase 3', () => {
+      cy.contains('FASE 3').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('.bi.bi-chevron-right').click()
+      cy.get('#answer').type('9')
+      cy.get('button[type="button"]').click()
+      //Escrevendo texto e clicando em enviar
+      cy.wait(1000)
+      cy.get('#answer').type('10')
+      cy.get('button[type="button"]').click()
+      cy.wait(1000)
+    
+      //Inserindo resposta na terceira atividade
+      cy.get('#answer').type('5')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quarta atividade
+      cy.get('#answer').type('11')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+
+      //Inserindo resposta na quinta atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sexta atividade
+      cy.get('#answer').type('17')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      
+      //Inserindo resposta na sétima atividade
+      cy.get('#answer').type('2')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na oitava atividade
+      cy.get('#answer').type('0')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na nona atividade
+      cy.get('#answer').type('20')
+      cy.get('button[type="button"]').click() 
+      cy.wait(1000)
+      //Inserindo resposta na decima atividade
+      cy.get('#answer').type('31')
+      cy.get('button[type="button"]').click() 
+
+      //Clicando no botão “↺” da Fase 3
+      cy.get('.bi.bi-arrow-counterclockwise').click()
+      cy.url().should('include', '/fase-3-1')
+    })
+})
+
