@@ -228,7 +228,7 @@ describe('Scripts Fase 1', () => {
       //  ---------------------------- FASE 2 ----------------------------
 })
 
-describe.only('Scripts Fase 2', () => {
+describe('Scripts Fase 2', () => {
     beforeEach(() => {
       cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
       cy.gui_iniciar()
@@ -590,7 +590,6 @@ describe('Scripts Fase 3', () => {
       cy.get('button[type="button"]').click()
       cy.contains('Tente outra vez.').should('be.visible')
 
-      
 
     })
     
@@ -1281,3 +1280,64 @@ describe('Scripts Fase 3', () => {
     })
 })
 
+// --------------------- Fase 4 --------------------------
+
+describe('Scripts Fase 4', () => {
+  beforeEach(() => {
+    cy.visit('https://wyllianyurk77.github.io/plugged-computing-web-front/')
+    cy.gui_iniciar()
+  })
+
+  it('CT059 - Mostrar fase 4', () => {
+    cy.contains('FASE 4').click()
+    cy.url().should('include', '/fase-4-1')
+  
+  })
+
+  it('CT060 - Navegar até segunda descrição da fase 4', () => {
+    cy.contains('FASE 4').click()
+    cy.get('.bi.bi-chevron-right').click()
+    cy.url().should('include', '/fase-4-2')
+  })
+  
+  it('CT061 - Navegar até a primeira atividade fase 4', () => {
+    cy.contains('FASE 4').click()
+    cy.get('.bi.bi-chevron-right').click()
+    cy.url().should('include', '/fase-4-2')
+
+    //clicando em avançar novamente
+    cy.get('.bi.bi-chevron-right').click()
+    cy.url().should('include', '/fase-4-3')
+  })
+
+  it('CT062 - Respondendo primeira atividade da fase 4 corretamente', () => {
+    cy.contains('FASE 4').click()
+    cy.get('.bi.bi-chevron-right').click()
+    cy.get('.bi.bi-chevron-right').click()
+    cy.url().should('include', '/fase-4-3')
+
+    //Escrevendo texto e clicando em enviar
+
+    cy.get('#answer').type('1')
+    cy.get('button[type="button"]').click()
+    
+    cy.wait(1000)
+  })
+
+  it('CT063 - Respondendo primeira atividade da fase 4 incorretamente', () => {
+    cy.contains('FASE 4').click()
+    cy.get('.bi.bi-chevron-right').click()
+    cy.get('.bi.bi-chevron-right').click()
+    cy.url().should('include', '/fase-4-3')
+
+    //Escrevendo texto e clicando em enviar
+    cy.wait(1000)
+
+    cy.get('#answer').type('0')
+    cy.get('button[type="button"]').click()
+    cy.contains('Tente outra vez.').should('be.visible')
+
+
+  })
+
+})
