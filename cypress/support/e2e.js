@@ -18,7 +18,7 @@ import './gui/helpers'
 
 import './gui/iniciar/iniciar'
 import './gui/fases/menu_fases'
-import './gui/fases/fase_1'
+//import './gui/fases/fase_1'
 import './gui/fases/fase_2'
 import './gui/fases/fase_3'
 import './gui/fases/fase_4'
