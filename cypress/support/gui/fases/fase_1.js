@@ -1,4 +1,4 @@
-const cypress = require("cypress");
+let cypress = require("cypress");
 
 Cypress.Commands.add('fase_1_clicarMenu', () => {
     cy.menuFases_clicarFase1();  
